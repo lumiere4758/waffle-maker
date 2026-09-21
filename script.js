@@ -54,7 +54,7 @@ cookBtn.addEventListener('click', () => {
     if (!state.isCooking) {
         // start cookin
         state.isCooking = true;
-        cookBtn.innerHTML = '<span>⏸️</span> Stop Cooking';
+        cookBtn.innerHTML = 'Stop Cooking';
         cookBtn.classList.replace('btn-secondary', 'btn-danger');
 
         const startTime = Date.now() - (state.cookTime * 1000);

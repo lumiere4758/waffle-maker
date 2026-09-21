@@ -71,11 +71,12 @@ header p {
     .app-container {
         grid-template-columns: 1fr 1fr;
     }
+}
 
-    .card {
+.card {
         background: var(--card-bg);
         border: 1px solid var(--border-color);
-        border-radius: var(radius-lg);
+        border-radius: var(--radius-lg);
         padding: 20px;
         box-shadow: var(--shadow-md);
         display: flex;
@@ -83,18 +84,18 @@ header p {
         gap: 18px;
     }
 
-    .section-title {
+.section-title {
         font-size: 1.5rem;
         font-weight: 700;
         color: var(--text-main);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 2px solid var(--bg-color);
+        border-bottom: 2px solid var(--bgcolor);
         padding-bottom: 10px;
     }
 
-    .badge {
+.badge {
         font-size: 0.75rem;
         font-weight: 600;
         padding: 4px 10px;
@@ -104,27 +105,27 @@ header p {
         color: var(--text-muted)
     }
 
-    .badge.raw {
+.badge.raw {
         background-color: #fff3cd;
         color: #856505;
     }
 
-    .badge.baking {
+.badge.baking {
         background-color: #cce5ff;
         color: #004085;
     }
 
-    .badge.perfect {
+.badge.perfect {
         background-color: #d4edda;
         color: #155724;
     }
 
-    .badge.burnt {
+.badge.burnt {
         background-color: #f8d7da;
         color: #721c24;
     }
 
-    .waffle-stage {
+.waffle-stage {
         position: relative;
         width: 100%;
         aspect-ratio: 1/1;
@@ -140,7 +141,7 @@ header p {
         user-select: none;
     }
 
-    .waffle-plate {
+.waffle-plate {
         width: 100%;
         height: 100%;
         background: #34495e;
@@ -155,34 +156,34 @@ header p {
         transition: background 0.5s ease;
     }
 
-    .waffle-cell {
+.waffle-cell {
         background: #2c3e50;
         border-radius: var(--radius-sm);
         box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
         transition: background-color 0.4s ease;
     }
 
-    .waffle-plate.empty .waffle-cell {
+.waffle-plate.empty .waffle-cell {
         background: #2c3e50;
     }
 
-    .waffle-plate.raw .waffle-cell {
+.waffle-plate.raw .waffle-cell {
         background: #fef08a;
     }
 
-    .waffle-plate.cooking .waffle-cell {
+.waffle-plate.cooking .waffle-cell {
         background: #f39c12;
     }
 
-    .waffle-plate.golden .waffle-cell {
+.waffle-plate.golden .waffle-cell {
         background: #d35400;
     }
 
-    .waffle-plate.burnt .waffle-cell {
+.waffle-plate.burnt .waffle-cell {
         background: #2d1810;
     }
 
-    .topping-canvas {
+.topping-canvas {
         position: absolute;
         top: 0;
         width: auto;
@@ -192,13 +193,13 @@ header p {
         touch-action: none;
     }
 
-    .timer-container {
+.timer-container {
         display: flex;
         flex-direction: column;
         gap: 8px;
     }
 
-    .timer-header {
+.timer-header {
         display: flex;
         justify-content: space-between;
         font-size: 0.85rem;
@@ -206,7 +207,7 @@ header p {
         color: var(--text-muted);
     }
 
-    .progress-bar-bg {
+.progress-bar-bg {
         width: 100%;
         height: 12px;
         background-color: var(--border-color);
@@ -215,19 +216,19 @@ header p {
         position: relative;
     }
 
-    .progress-bar-fill {
+.progress-bar-fill {
         height: 100%;
         width: 0%;
         background: linear-gradient(90deg, var(--accent-yellow), var(--primary-amber), var(--accent-red));
         transition: width 0.1s linear;
     }
 
-    .btn-group {
+.btn-group {
         display: flex;
         gap: 10px;
     }
 
-    .btn {
+.btn {
         flex: 1;
         padding: 10px 16px;
         border: none;
@@ -242,52 +243,52 @@ header p {
         gap: 6px;
     }
 
-    .btn:active {
+.btn:active {
         transform: scale(0.98);
     }
 
-    .btn-primary {
+.btn-primary {
         background-color: var(--primary-amber);
         color: #ffffff;
     }
 
-    .btn-primary:hover {
+.btn-primary:hover {
         background-color: var(--primary-hover);
     }
 
-    .btn-secondary {
-        background-color: var(--bg-color);
+.btn-secondary {
+        background-color: var(--bgcolor);
         color: var(--text-main);
         border: 1px solid var(--border-color);
     }
 
-    .btn-secondary:hover {
+.btn-secondary:hover {
         background-color: var(--border-color);
     }
 
-    .btn-danger {
+.btn-danger {
         background-color: var(--accent-red);
         color: #ffffff;
     }
 
-    .btn-danger:hover {
+.btn-danger:hover {
         background-color: #c0392b;
     }
 
-    .btn:disabled {
+.btn:disabled {
         opacity: 0.5;
         cursor: not-allowed;
         transform: none;
     }
 
-    .topping-palette {
+.topping-palette {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
 
-    .topping-btn {
-        background-color: var(--bg-color);
+.topping-btn {
+        background-color: var(--bgcolor);
         border: 1.5px solid var(--border-color);
         border-radius: var(--radius-md);
         padding: 10px 8px;
@@ -316,8 +317,8 @@ header p {
       font-size: 1.4rem;
     }
 
-    .score-box {
-      background-color: var(--bg-color);
+.score-box {
+            background-color: var(--bgcolor);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       padding: 16px;
@@ -340,12 +341,10 @@ header p {
       line-height: 1.4;
     }
 
-    footer {
+footer {
       margin-top: auto;
       padding-top: 24px;
       font-size: 0.8rem;
       color: var(--text-muted);
       text-align: center;
-    }
-    
 }
