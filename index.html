@@ -52,14 +52,40 @@
         <section class="card">
             <div class="section-title">
                 <span>Decorate your waffle</span>
-                <span id ="toppingCounter" class="badge">0 Toppings</span>
+                <span id="toppingCounter" class="badge">0 Toppings</span>
             </div>
 
             <!--topping seelctor-->
-           
+            <div class="topping-palette">
+                <button class="topping-btn active" data-topping="butter">Butter</button>
+                <button class="topping-btn" data-topping="syrup">Syrup</button>
+                <button class="topping-btn" data-topping="strawberry">Strawberry</button>
+                <button class="topping-btn" data-topping="blueberry">Blueberry</button>
+                <button class="topping-btn" data-topping="cream">Cream</button>
+                <button class="topping-btn" data-topping="chocolate">Choco</button>
+            </div>
+
+            <div class="btn-group">
+                <button id="clearToppingsBtn" class="btn btn-secondary">Clear toppings</button>
+                <button id="serveBtn" class="btn btn-primary">Serve your waffle</button>
+            </div>
+
+            <!-- waffle score board-->
+            <div class="score-box">
+                <div class="score-value" id="scoreDisplay">0%</div>
+                <div class="critique-text" id="critiqueDisplay">
+                    Bake ur waffle first before u serve it, baka!
+                </div>
+            </div>
+
+            <button id="resetBtn" class="btn btn-danger">Reset Wafle</button>
+
+
         </section>
 
     </main>
 
-
+    <footer>
+        <p>© 2024 WaffleIron 2307. FREE FOR ALL!</p>
+    </footer>
 </body>
