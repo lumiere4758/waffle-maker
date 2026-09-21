@@ -1,1 +1,65 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaffleIron 2307</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1>WaffleIron 2307</h1>
+        <p>CREATE TASTY AND KAWAI AND YUMMY YUMMY WAFFLES :)</p>
+    </header>
+
+    <main class="app-container">
+
+        <section class="card">
+            <div class="section-title">
+                <span>Bake your waffle</span>
+                <span id="statusBadge" class="badge raw">Empty</span>
+            </div>
+
+            <div class="waffle-stage">
+                <div id="wafflePlate" class="waffle-plate empty">
+                    <!--16 grid cells to generate here-->
+                </div>
+                <!-- dis for toppings -->
+                <canvas id="toppingCanvas" class="topping-canvas" width="320" height="320"></canvas>
+            </div>
+
+            <!-- cooking timer-->
+            <div class="timer-container">
+                <div class="timer-header">
+                    <span>Cook Timer: <strong id="timerLabel">0.0s</strong></span>
+                    <span>Doneness: <strong id="donenessLabel">Raw (0%_)</strong></span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="progressBar" class="progress-bar-fill">
+                    </div>
+                </div>
+
+            </div>
+            <div class="btn-group">
+                <button id="pourBtn" class="btn btn-primary">Pour Batter</button>
+                <button id="cookBtn" class="btn btn-secondary" disabled>Cook</button>
+            </div>
+
+        </section>
+
+        <section class="card">
+            <div class="section-title">
+                <span>Decorate your waffle</span>
+                <span id ="toppingCounter" class="badge">0 Toppings</span>
+            </div>
+
+            <!--topping seelctor-->
+           
+        </section>
+
+    </main>
+
+
+</body>
