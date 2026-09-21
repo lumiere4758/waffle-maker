@@ -8,6 +8,7 @@ const state = {
 }
 
 let cookInterval = null;
+let cookTimeout = null;
 
 // DOM
 
@@ -62,10 +63,18 @@ cookBtn.addEventListener('click', () => {
             state.cookTime = (Date.now() - startTime) / 1000;
             updateCookingProgress();
         }, 100);
+        cookTimeout = setTimeout(() => {
+            state.isCooking = false;
+            clearInterval(cookInterval);
+            cookBtn.innerHTML = 'Cooking Complete';
+            cookBtn.classList.replace('btn-danger', 'btn-secondary');
+            updateCookingProgress();
+        }, Math.max(0, (12 - state.cookTime) * 1000));
     } else {
         // Stop cooking
         state.isCooking = false;
         clearInterval(cookInterval);
+        clearTimeout(cookTimeout);
         cookBtn.innerHTML = 'Resume Cooking';
         cookBtn.classList.replace('btn-danger', 'btn-secondary');
     }
@@ -251,6 +260,7 @@ serveBtn.addEventListener('click', () => {
 
 resetBtn.addEventListener('click', () => {
     clearInterval(cookInterval);
+    clearTimeout(cookTimeout);
 
     state.hasBatter = false;
     state.isCooking = false;
